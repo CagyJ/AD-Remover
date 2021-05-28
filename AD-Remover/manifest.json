@@ -1,0 +1,18 @@
+{
+    "name" : "AD Remover",
+    "description" : "Skip and close the AD in youtube.",
+    "version" : "0.1",
+    "permissions" : [ 
+        "activeTab", 
+        "declarativeContent", 
+        "storage",
+        "https://www.youtube.com/*" ],
+    "manifest_version" : 2,
+    "content_scripts" : [
+        {
+            "matches" : ["https://www.youtube.com/*"],
+            "run_at" : "document_idle",
+            "js" : ["skipAndClose.js"]
+        }
+    ]
+}
